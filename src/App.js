@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Axiostest from "./Axiostest";
 
 function App() {
   return (
@@ -10,6 +11,13 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>
+          well I did, didn´t I?
+        </p>
+        <p>
+          did I ended?
+        </p>
+        <Axiostest />
         <a
           className="App-link"
           href="https://reactjs.org"
