@@ -1,0 +1,14 @@
+footer {
+  font-size: small;
+}
+
+a {
+  color: rgb(92, 139, 209);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(92, 139, 209);
+  font-weight: bold;
+}

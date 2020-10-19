@@ -1,0 +1,35 @@
+.Info h1 {
+  font-weight: 400;
+}
+
+.Info h3 {
+  font-weight: 300;
+  font-size: 22px;
+}
+.Info h2 {
+  font-size: 40px;
+}
+
+.Info sup {
+  color: rgb(92, 139, 209);
+  font-size: 22px;
+}
+
+.Info a:hover {
+  text-decoration: none;
+}
+
+.Info .image-weather {
+  font-size: 110px;
+}
+
+.Info .fa-temperature-high {
+  color: red;
+}
+.Info .fa-temperature-low {
+  color: blue;
+}
+.Info ul {
+  list-style: none;
+  padding: 0;
+}

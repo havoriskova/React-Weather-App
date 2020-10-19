@@ -1,34 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Axiostest from "./Axiostest";
+import React from "react";
+import Search from "./Search";
+import Info from "./Info";
+import Forecast from "./Forecast";
+import Footer from "./Footer";
 
-function App() {
+import "./Styles.css";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          well I did, didn´t I?
-        </p>
-        <p>
-          did I ended?
-        </p>
-        <Axiostest />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="container">
+        <div class="card card-weather">
+          <div class="card-body card-body-weather">
+            {" "}
+            <Search />
+            <div class="card card-main-weather">
+              <div class="card-body card-body-main-weather">
+                <Info />
+              </div>
+            </div>
+            <Forecast />
+          </div>
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;
