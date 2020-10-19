@@ -12,14 +12,14 @@ export default function App() {
             {" "}
             <span id="number"> 19 </span>
             <sup>
-              <a href="#" id="celsius">
+              <button  id="celsius">
                 {" "}
                 °C{" "}
-              </a>
+              </button>
               |{" "}
-              <a href="#" id="farenheit">
+              <button  id="farenheit">
                 °F{" "}
-              </a>
+              </button>
             </sup>{" "}
           </h2>
           <h3>partly cloudy</h3>

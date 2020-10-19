@@ -11,12 +11,17 @@
 }
 
 .Info sup {
-  color: rgb(92, 139, 209);
   font-size: 22px;
 }
 
-.Info a:hover {
-  text-decoration: none;
+.Info button {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.Info button:focus {
+  outline: none;
+  color: rgb(92, 139, 209);
 }
 
 .Info .image-weather {

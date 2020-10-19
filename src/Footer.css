@@ -1,13 +1,13 @@
-footer {
-  font-size: small;
+.Footer {
+  font-size: 90%;
 }
 
-a {
+.Footer a {
   color: rgb(92, 139, 209);
   text-decoration: none;
 }
 
-a:hover {
+.Footer a:hover {
   text-decoration: none;
   color: rgb(92, 139, 209);
   font-weight: bold;
