@@ -7,11 +7,11 @@ export default function App() {
     <div className="Info">
       <div className="row">
         <div className="col-6">
-          <h1 id="heading-with-city"> Prag </h1>
-          <h2>
+          <div id="heading-with-city"> Prag </div>
+          <div>
             {" "}
             <span id="number"> 19 </span>
-            <sup>
+            <span className="units">
               <button  id="celsius">
                 {" "}
                 °C{" "}
@@ -20,20 +20,20 @@ export default function App() {
               <button  id="farenheit">
                 °F{" "}
               </button>
-            </sup>{" "}
-          </h2>
-          <h3>partly cloudy</h3>
-          <h4 className="heading-with-date"> date </h4>
+            </span>{" "}
+          </div>
+          <em id="description">partly cloudy</em>
+          <div id="heading-with-date"> date </div>
         </div>
-        <div className="col-6">
-          <h5 className="image-weather">
-            {" "}
-            <i className="fas fa-cloud-sun"></i>{" "}
-          </h5>
+        <div className="col-6 image-weather">
+          
+            
+            <i className="fas fa-cloud-sun"></i>
+          
         </div>
       </div>
 
-      <div className="row">
+      <div className="row line-list">
         <div className="col-3">
           {" "}
           <span className="high-temperature">
