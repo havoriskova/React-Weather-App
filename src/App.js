@@ -4,18 +4,18 @@ import Info from "./Info";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
 
-import "./Styles.css";
+import "./App.css";
 
 export default function App() {
   return (
     <div className="App">
-      <div class="container">
-        <div class="card card-weather">
-          <div class="card-body card-body-weather">
+      <div className="container">
+        <div className="card card-weather">
+          <div className="card-body card-body-weather">
             {" "}
             <Search />
-            <div class="card card-main-weather">
-              <div class="card-body card-body-main-weather">
+            <div className="card card-main-weather">
+              <div className="card-body card-body-main-weather">
                 <Info />
               </div>
             </div>

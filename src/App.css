@@ -1,3 +1,8 @@
+.container {
+  margin-top: 2%;
+  max-width: 700px;
+}
+
 .card-weather {
   border: none;
 }
