@@ -5,11 +5,10 @@ import Date from "./Date";
 
 import "./WeatherApp.css";
 
-
-export default function WeatherApp(props) {
+export default function WeatherApp() {
   
   const [city, setCity] = useState("");
-  const [weather, setWeather] = useState({loaded: false}); {/*state as an object with one default key - loaded boolean */}
+  const [weather, setWeather] = useState({loaded: false}); 
 
   function displayWeather(response) {
     console.log(response.data);
@@ -40,7 +39,7 @@ function handleSubmit(event) {
         <input type="text" placeholder="type a city" autoFocus="on" id="input-city-form" onChange={updateCity}/>
         <input type="submit" id="search-submit" value="🔍 Search" />
       </form>
-      <button id="button">🚩 Current location</button></div>
+      <button id="button">Current location  </button></div>
   );
 
   if (weather.loaded) {
@@ -78,12 +77,12 @@ function handleSubmit(event) {
       <ul className="line-list">
         <li className="list">
           {" "}
-          <span class="sun-sunrise"> </span>
+          <span className="sun-sunrise"> </span>
                   <span id="sunrise">sunrise time</span>
         </li>
         <li className="list">
           {" "}
-           <span class="sun-sunset"> </span>
+           <span className="sun-sunset"> </span>
                   <span id="sunset">sunset time</span>
         </li>
         <li className="list">
