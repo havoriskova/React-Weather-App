@@ -3,16 +3,3 @@
   margin-top: 2%;
   max-width: 700px;
 }
-
-.App .card-weather {
-  border: none;
-}
-.App .card-main-weather {
-  margin: 20px auto;
-  border: none;
-}
-
-.App .card-body-weather {
-  background-image: linear-gradient(to top, rgb(92, 139, 209) 0%, #fef9d7 100%);
-  border-radius: 10px;
-}

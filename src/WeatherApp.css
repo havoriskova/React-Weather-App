@@ -1,0 +1,98 @@
+.WeatherApp .card-weather {
+  border: none;
+}
+.WeatherApp .card-main-weather {
+  margin: 20px auto;
+  border: none;
+}
+
+.WeatherApp .card-body-weather {
+  background-image: linear-gradient(to top, rgb(92, 139, 209) 0%, #fef9d7 100%);
+  border-radius: 10px;
+}
+
+.WeatherApp {
+  font-size: 20px;
+}
+
+.WeatherApp form {
+  display: inline;
+}
+
+.WeatherApp #search-submit,
+.WeatherApp #button {
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: rgb(92, 139, 209);
+  color: #fef9d7;
+  margin: 10px;
+}
+.WeatherApp #button {
+  padding: 1px 5px;
+}
+
+.WeatherApp .city {
+  font-weight: 500;
+}
+
+.WeatherApp #number {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.WeatherApp .units {
+  font-size: 16px;
+  position: relative;
+  top: -10px;
+}
+
+.WeatherApp #celsius,
+.WeatherApp #farenheit {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.WeatherApp #celsius:focus,
+.WeatherApp #farenheit:focus {
+  outline: none;
+  color: rgb(92, 139, 209);
+}
+
+.WeatherApp #description,
+.WeatherApp #heading-with-date {
+  font-size: 18px;
+}
+.WeatherApp .image-weather {
+  font-size: 90px;
+  position: relative;
+  top: -10px;
+}
+
+.WeatherApp .line-list {
+  font-size: 16px;
+  padding: 15px 0 0 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.WeatherApp .list {
+  padding: 0;
+  display: inline;
+  flex: 1;
+  align-self: baseline;
+}
+
+.WeatherApp .sun-sunrise,
+.WeatherApp .sun-sunset {
+  font-size: 29px;
+  position: relative;
+  top: 8px;
+}
+
+@media screen and (max-width: 800px) {
+  .WeatherApp #button {
+    margin: 0;
+  }
+}
