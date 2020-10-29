@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Date from "./Date";
+import Day from "./Day";
+import Hours from "./Hours";
 
 
 import "./WeatherApp.css";
@@ -20,6 +21,9 @@ export default function WeatherApp() {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       city: response.data.name,
+      timestamp: response.data.dt,
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
       iconSrc:  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -67,7 +71,7 @@ function handleSubmit(event) {
             </span>{" "}
           </div>
           <em id="description" className="text-capitalize">{weather.description}</em>
-          <Date /> 
+          <div id="heading-with-date"> Last update: <Day timestamp={weather.timestamp}/>, <Hours timestamp={weather.timestamp}/> </div>
         </div>
         <div className="col-6 image-weather">
                  <img src={weather.iconSrc} alt={weather.description} />
@@ -78,12 +82,12 @@ function handleSubmit(event) {
         <li className="list">
           {" "}
           <span className="sun-sunrise"> </span>
-                  <span id="sunrise">sunrise time</span>
+                  <span id="sunrise"><Hours timestamp={weather.sunrise}/></span>
         </li>
         <li className="list">
           {" "}
            <span className="sun-sunset"> </span>
-                  <span id="sunset">sunset time</span>
+                  <span id="sunset"><Hours timestamp={weather.sunset}/></span>
         </li>
         <li className="list">
           <span className="rain">
