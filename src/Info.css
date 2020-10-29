@@ -1,0 +1,65 @@
+.Info .card-main-weather {
+  margin: 20px auto;
+  border: none;
+  padding: 10px;
+}
+
+.Info .city {
+  font-weight: 500;
+}
+
+.Info #number {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.Info .units {
+  font-size: 16px;
+  position: relative;
+  top: -10px;
+}
+
+.Info #celsius,
+.Info #farenheit {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.Info #celsius:focus,
+.Info #farenheit:focus {
+  outline: none;
+  color: rgb(92, 139, 209);
+}
+
+.Info #description,
+.Info #heading-with-date {
+  font-size: 18px;
+}
+.Info .image-weather {
+  font-size: 90px;
+  position: relative;
+  top: -10px;
+}
+
+.Info .line-list {
+  font-size: 16px;
+  padding: 15px 0 0 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.Info .list {
+  padding: 0;
+  display: inline;
+  flex: 1;
+  align-self: baseline;
+}
+
+.Info .sun-sunrise,
+.Info .sun-sunset {
+  font-size: 29px;
+  position: relative;
+  top: 8px;
+}
