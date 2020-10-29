@@ -1,6 +1,7 @@
 import React from "react";
 import Day from "./Day";
 import Hours from "./Hours";
+import Icon from "./Icon";
 
 import "./Info.css";
 
@@ -28,7 +29,7 @@ export default function Info(props) {
           <div id="heading-with-date"> Last update: <Day timestamp={props.data.timestamp}/>, <Hours timestamp={props.data.timestamp}/> </div>
         </div>
         <div className="col-6 image-weather">
-                 <img src={props.data.iconSrc} alt={props.data.description} />
+             <Icon icon={props.data.iconCode} />
         </div>
       </div>
 

@@ -36,10 +36,9 @@
 .Info #heading-with-date {
   font-size: 18px;
 }
-.Info .image-weather {
-  font-size: 90px;
+.Info canvas {
   position: relative;
-  top: -10px;
+  top: 10px;
 }
 
 .Info .line-list {

@@ -24,7 +24,7 @@ export default function WeatherApp(props) {
       timestamp: response.data.dt,
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
-      iconSrc:  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconCode: response.data.weather[0].icon,
     });
   }
 
