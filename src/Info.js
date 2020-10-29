@@ -2,6 +2,7 @@ import React from "react";
 import Day from "./Day";
 import Hours from "./Hours";
 import Icon from "./Icon";
+import Temperature from "./Temperature";
 
 import "./Info.css";
 
@@ -12,18 +13,8 @@ export default function Info(props) {
         <div className="col-6">
           <div className="city"> {props.data.city} </div>
           <div>
-            {" "}
-            <span id="number"> {Math.round(props.data.temperature)} </span>
-            <span className="units">
-              <button  id="celsius">
-                {" "}
-                °C{" "}
-              </button>
-              |{" "}
-              <button  id="farenheit">
-                °F{" "}
-              </button>
-            </span>{" "}
+            <Temperature celsius={props.data.temperature}/>
+            
           </div>
           <em id="description" className="text-capitalize">{props.data.description}</em>
           <div id="heading-with-date"> Last update: <Day timestamp={props.data.timestamp}/>, <Hours timestamp={props.data.timestamp}/> </div>

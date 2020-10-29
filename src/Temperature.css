@@ -1,0 +1,30 @@
+.Temperature #number {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.Temperature .units {
+  font-size: 16px;
+  position: relative;
+  top: -10px;
+}
+
+.Temperature #celsius,
+.Temperature #farenheit {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.Temperature #celsius:focus,
+.Temperature #farenheit:focus {
+  outline: none;
+}
+
+.Temperature .active {
+  color: rgb(92, 139, 209);
+}
+
+.Temperature .inactive {
+  cursor: default;
+}

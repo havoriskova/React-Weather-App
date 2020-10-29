@@ -8,30 +8,6 @@
   font-weight: 500;
 }
 
-.Info #number {
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.Info .units {
-  font-size: 16px;
-  position: relative;
-  top: -10px;
-}
-
-.Info #celsius,
-.Info #farenheit {
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-}
-.Info #celsius:focus,
-.Info #farenheit:focus {
-  outline: none;
-  color: rgb(92, 139, 209);
-}
-
 .Info #description,
 .Info #heading-with-date {
   font-size: 18px;
