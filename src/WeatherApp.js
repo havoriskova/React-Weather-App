@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Info from "./Info";
+import Forecast from "./Forecast";
 
 
 
@@ -48,7 +49,7 @@ function handleSubmit(event) {
           onChange={updateCity}/>
         <input type="submit" id="search-submit" value="🔍 Search" />
       </form>
-      <button id="button">Current location  </button></div>
+     </div> 
   );
 
   if (weather.loaded) {
@@ -60,7 +61,7 @@ function handleSubmit(event) {
                      <Info data={weather} /> 
 
 
-                     {/* <Forecast /> props ! */}
+                     <Forecast dataCity={weather.city}/>
                   </div>
                 </div>
              </div>

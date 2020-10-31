@@ -1,95 +1,37 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
+import ForecastInfo from "./ForecastInfo";
 
 import "./Forecast.css";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast">
-      <ul>
-        <li>
-          {" "}
-          <div className="row">
-            {" "}
-            <div className="col-3">Mon </div>{" "}
-            <div className="col-3">
-              <i className="fas fa-cloud-showers-heavy"></i>{" "}
-            </div>
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-umbrella"></i> 5%{" "}
-            </div>
-            <div className="col-3"> 20°C | 15°C </div>
-          </div>{" "}
-        </li>
+export default function Forecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
-        <li>
-          {" "}
-          <div className="row">
-            {" "}
-            <div className="col-3">Tue </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-sun"></i>
-            </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-umbrella"></i> 10%{" "}
-            </div>{" "}
-            <div className="col-3"> 21°C | 17°C </div>
-          </div>{" "}
-        </li>
+function showForecast(response) {
+  setForecast(response.data);
+  setLoaded(true);
+}
 
-        <li>
-          {" "}
-          <div className="row">
-            {" "}
-            <div className="col-3">Wed </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-cloud-sun"></i>
-            </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-umbrella"></i> 5%{" "}
-            </div>{" "}
-            <div className="col-3"> 23°C | 18°C </div>
-          </div>
-        </li>
 
-        <li>
-          {" "}
-          <div className="row">
-            {" "}
-            <div className="col-3">Thu </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-sun"></i>{" "}
-            </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-umbrella"></i> 7%{" "}
-            </div>
-            <div className="col-3"> 19°C | 15°C </div>
-          </div>
-        </li>
-
-        <li>
-          {" "}
-          <div className="row">
-            {" "}
-            <div className="col-3">Fri </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-cloud"></i>{" "}
-            </div>{" "}
-            <div className="col-3">
-              {" "}
-              <i className="fas fa-umbrella"></i> 8%{" "}
-            </div>
-            <div className="col-3"> 18°C | 14°C </div>
-          </div>
-        </li>
-      </ul>
+ if (loaded && props.dataCity === forecast.city.name) {
+    return (
+    <div className="Forecast row"> 
+    <ForecastInfo index={0} forecast={forecast}/>
+    <ForecastInfo index={1} forecast={forecast}/>
+    <ForecastInfo index={2} forecast={forecast}/>
+    <ForecastInfo index={3} forecast={forecast}/>
+    <ForecastInfo index={4} forecast={forecast}/>
     </div>
   );
+} else {
+
+  const apiKey="094780c710fa4efd669f0df8c3991927";
+  let units = "metric";
+  let apiUrlForecast=`https://api.openweathermap.org/data/2.5/forecast?q=${props.dataCity}&units=${units}&appid=${apiKey}`;
+ axios.get(apiUrlForecast).then(showForecast);
+
+return (
+     <div>loading..</div> )
+}
 }

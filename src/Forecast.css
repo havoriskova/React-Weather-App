@@ -1,4 +1,22 @@
-.Forecast ul {
-  list-style: none;
-  padding: 0;
+.Forecast {
+  text-align: center;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+.Forecast canvas {
+  display: block;
+  width: 60px;
+  margin: 10px auto;
+}
+
+.col {
+  margin: 0 10px;
+  padding: 4px 0;
+  border-radius: 5px;
+}
+
+.col:hover {
+  background-color: white;
+  transition: all 150ms linear;
 }
