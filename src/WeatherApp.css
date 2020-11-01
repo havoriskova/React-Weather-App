@@ -18,12 +18,17 @@
 .WeatherApp form {
   display: inline;
 }
+
+.WeatherApp #input-city-form {
+  margin-right: 10px;
+}
+
 .WeatherApp #search-submit {
   border: 2px solid;
   border-radius: 4px;
   background-color: rgb(109, 151, 214);
   color: #fef9d7;
-  margin-left: 10px;
+
   padding: 2px 5px;
 }
 
