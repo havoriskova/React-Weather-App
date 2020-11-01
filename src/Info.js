@@ -13,12 +13,12 @@ export default function Info(props) {
           <div className="city"> {props.data.city}, {props.data.country} </div>
            <div id="heading-with-date"> Last update: <Day timestamp={props.data.timestamp}/>, <Hours timestamp={props.data.timestamp}/> </div>
         
-        <div className="row">
-          <div className="col-7">
+        <div className="row center-of-info">
+          <div className="col-6">
           <span className="image-weather">
              <Icon icon={props.data.iconCode} />   </span>
              <span> <Temperature celsius={props.data.temperature}/> </span></div>
-        <div className="col-5">
+        <div className="col-6">
           <div id="description" className="text-capitalize">{props.data.description}</div>
          <div id="humidity"> Humidity: {props.data.humidity} %</div>
         

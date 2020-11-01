@@ -21,11 +21,15 @@
   display: block;
 }
 
+.Info .center-of-info {
+  margin-top: 3px;
+}
+
 .Info canvas {
+  width: 45px;
+  margin-right: 5px;
   position: relative;
   top: 10px;
-  width: 50px;
-  margin-right: 5px;
 }
 
 .Info .line-list {
@@ -54,6 +58,6 @@
   .Info #heading-with-date,
   .Info .line-list,
   .Info #humidity {
-    font-size: 80%;
+    font-size: 70%;
   }
 }

@@ -1,12 +1,12 @@
 .Temperature #number {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
 }
 
 .Temperature .units {
   font-size: 16px;
   position: relative;
-  top: -20px;
+  top: -16px;
 }
 
 .Temperature #celsius,
