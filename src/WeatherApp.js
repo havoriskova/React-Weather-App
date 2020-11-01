@@ -22,6 +22,7 @@ export default function WeatherApp(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       city: response.data.name,
+      country: response.data.sys.country,
       timestamp: response.data.dt,
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,

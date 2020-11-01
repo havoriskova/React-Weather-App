@@ -9,20 +9,20 @@ import "./Info.css";
 export default function Info(props) {
   return (<div className="Info">
     <div className="card card-main-weather">
-      <div className="row">
+  
+          <div className="city"> {props.data.city}, {props.data.country} </div>
+           <div id="heading-with-date"> Last update: <Day timestamp={props.data.timestamp}/>, <Hours timestamp={props.data.timestamp}/> </div>
+        
+        <div className="row">
+          <div className="col-6">
+          <span className="image-weather">
+             <Icon icon={props.data.iconCode} />   </span>
+             <span> <Temperature celsius={props.data.temperature}/> </span></div>
         <div className="col-6">
-          <div className="city"> {props.data.city} </div>
-          <div>
-            <Temperature celsius={props.data.temperature}/>
-            
-          </div>
-          <em id="description" className="text-capitalize">{props.data.description}</em>
-          <div id="heading-with-date"> Last update: <Day timestamp={props.data.timestamp}/>, <Hours timestamp={props.data.timestamp}/> </div>
-        </div>
-        <div className="col-6 image-weather">
-             <Icon icon={props.data.iconCode} />
-        </div>
-      </div>
+          <div> <em id="description" className="text-capitalize">{props.data.description}</em></div>
+         <div id="humidity"> Humidity: {props.data.humidity} %</div>
+        
+      </div></div>
 
       <ul className="line-list">
         <li className="list">
@@ -34,12 +34,6 @@ export default function Info(props) {
           {" "}
            <span className="sun-sunset"> </span>
                   <span id="sunset"><Hours timestamp={props.data.sunset}/></span>
-        </li>
-        <li className="list">
-          <span className="rain">
-            {" "}
-            <i className="fas fa-umbrella"></i> {props.data.humidity} %
-          </span>
         </li>
         <li className="list">
           <span className="wind">

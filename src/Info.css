@@ -9,17 +9,20 @@
 }
 
 .Info #description,
-.Info #heading-with-date {
-  font-size: 18px;
+.Info #heading-with-date,
+.Info .line-list,
+.Info #humidity {
+  font-size: 17px;
 }
 .Info canvas {
   position: relative;
   top: 10px;
+  width: 50px;
+  margin-right: 5px;
 }
 
 .Info .line-list {
-  font-size: 16px;
-  padding: 15px 0 0 0;
+  padding: 15px 0 5px 0;
   margin: 0;
   list-style: none;
   display: flex;

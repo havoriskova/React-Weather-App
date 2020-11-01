@@ -1,17 +1,19 @@
+.Forecast.row {
+  margin: 0;
+}
+
 .Forecast {
   text-align: center;
-  font-size: 16px;
-  padding: 0 5px;
+  font-size: 15px;
 }
 
 .Forecast canvas {
   display: block;
-  width: 60px;
+  width: 45px;
   margin: 10px auto;
 }
 
 .col {
-  margin: 0 10px;
   padding: 4px 0;
   border-radius: 5px;
 }

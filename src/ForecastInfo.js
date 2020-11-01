@@ -12,7 +12,7 @@ let date=new Date(props.forecast.list[props.index].dt * 1000);
 function formatTemperature() {
 let temperature = Math.round(props.forecast.list[props.index].main.temp);
 
-return `${temperature}°C`
+return <span><b>{temperature}</b> ° C </span>
 }
 
     return (

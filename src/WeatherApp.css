@@ -3,7 +3,11 @@
 }
 
 .WeatherApp .card-body-weather {
-  background-image: linear-gradient(to top, rgb(92, 139, 209) 0%, #fef9d7 100%);
+  background-image: linear-gradient(
+    to top,
+    rgb(162, 187, 224) 0%,
+    #fef9d7 100%
+  );
   border-radius: 10px;
 }
 
@@ -14,20 +18,17 @@
 .WeatherApp form {
   display: inline;
 }
-.WeatherApp #search-submit,
-.WeatherApp #button {
-  border: 1px solid;
+.WeatherApp #search-submit {
+  border: 2px solid;
   border-radius: 4px;
-  background-color: rgb(92, 139, 209);
+  background-color: rgb(109, 151, 214);
   color: #fef9d7;
-  margin: 10px;
-}
-.WeatherApp #button {
-  padding: 1px 5px;
+  margin-left: 10px;
+  padding: 2px 5px;
 }
 
-@media screen and (max-width: 800px) {
-  .WeatherApp #button {
-    margin: 0;
-  }
+.WeatherApp #search-submit:hover {
+  box-shadow: 5px 5px 10px rgb(92, 139, 209);
+  color: rgb(92, 139, 209);
+  background-color: #fef9d7;
 }
