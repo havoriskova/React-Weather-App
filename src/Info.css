@@ -48,3 +48,12 @@
   position: relative;
   top: 8px;
 }
+
+@media screen and (max-width: 600px) {
+  .Info #description,
+  .Info #heading-with-date,
+  .Info .line-list,
+  .Info #humidity {
+    font-size: 80%;
+  }
+}
