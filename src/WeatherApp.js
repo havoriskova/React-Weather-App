@@ -45,11 +45,11 @@ function handleSubmit(event) {
   }
 
   let form = (<div className="WeatherApp">
-     <form id="search-form" onSubmit={handleSubmit}>
-        <input type="text" placeholder="type a city" autoFocus="on" id="input-city-form" 
-          onChange={updateCity}/>
-        <input type="submit" id="search-submit" value="🔍 Search" />
-      </form>
+      <form id="search-form" onSubmit={handleSubmit}> <div className="row">
+        <span className="col-8"> <input type="text"  className="form-control" placeholder="type a city" autoFocus="on" id="input-city-form" 
+          onChange={updateCity}/></span>
+       <span className="col-4"> <input type="submit" id="search-submit" value="🔍 Search"/></span>
+      </div> </form>
      </div> 
   );
 

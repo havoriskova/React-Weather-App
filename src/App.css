@@ -4,3 +4,7 @@
   max-width: 700px;
   font-family: "Literata", serif;
 }
+
+.App .container {
+  padding: 0;
+}

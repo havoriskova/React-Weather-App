@@ -19,7 +19,7 @@ export default function Info(props) {
              <Icon icon={props.data.iconCode} />   </span>
              <span> <Temperature celsius={props.data.temperature}/> </span></div>
         <div className="col-5">
-          <div> <em id="description" className="text-capitalize">{props.data.description}</em></div>
+          <div id="description" className="text-capitalize">{props.data.description}</div>
          <div id="humidity"> Humidity: {props.data.humidity} %</div>
         
       </div></div>

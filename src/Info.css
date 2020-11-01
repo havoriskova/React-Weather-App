@@ -14,6 +14,13 @@
 .Info #humidity {
   font-size: 15px;
 }
+
+.Info #description {
+  line-height: 1.5;
+  color: rgb(109, 151, 214);
+  display: block;
+}
+
 .Info canvas {
   position: relative;
   top: 10px;

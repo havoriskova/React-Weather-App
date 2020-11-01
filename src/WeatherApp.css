@@ -19,10 +19,6 @@
   display: inline;
 }
 
-.WeatherApp #input-city-form {
-  margin-right: 10px;
-}
-
 .WeatherApp #search-submit {
   border: 2px solid;
   border-radius: 4px;
