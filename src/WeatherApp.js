@@ -44,12 +44,25 @@ function handleSubmit(event) {
     setCity(event.target.value);
   }
 
-  let form = (<div className="WeatherApp">
-      <form id="search-form" onSubmit={handleSubmit}> <div className="row">
-        <span className="col-7"> <input type="text"  className="form-control" placeholder="type a city" autoFocus="on" id="input-city-form" 
-          onChange={updateCity}/></span>
-       <span className="col-5"> <input type="submit" id="search-submit" value="🔍 Search"/></span>
-      </div> </form>
+function handleCurrent(event) {
+   event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+function searchLocation(position) {
+  const apiKey = "6f8eb5e9009796b8d457f007bc62c74f";
+  let units = "metric";
+  let urlEndPoint = "https://api.openweathermap.org/data/2.5/";
+  let apiUrl = `${urlEndPoint}weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
+  let form = (<div className="WeatherApp form">
+      <form id="search-form" onSubmit={handleSubmit}>
+         <input type="text"  placeholder="type a city" autoFocus="on" id="input-city-form" 
+          onChange={updateCity}/>
+       <input type="submit" id="search-submit" value="🔍 Search"/>
+       </form>
      </div> 
   );
 
@@ -58,6 +71,7 @@ function handleSubmit(event) {
                 <div className="card card-weather">
                    <div className="card-body card-body-weather">
                       {form}
+                      <button id="current-button" onClick={handleCurrent}>Current</button>
 
                      <Info data={weather} /> 
 
