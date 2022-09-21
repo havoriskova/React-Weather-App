@@ -10,9 +10,12 @@ let date=new Date(props.forecast.list[props.index].dt * 1000);
     }
 
 function formatTemperature() {
-let temperature = Math.round(props.forecast.list[props.index].main.temp);
+let temperatureInCelsius = Math.round(props.forecast.list[props.index].main.temp);
 
-return <span><b>{temperature}</b> ° C </span>
+if (props.unit === "celsius") {
+return <span><b>{temperatureInCelsius}</b> ° C </span>}
+else {
+return <span><b>{Math.round(temperatureInCelsius*(9/5)+32)}</b> ° F </span>} 
 }
 
     return (

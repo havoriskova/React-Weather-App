@@ -17,11 +17,11 @@ function showForecast(response) {
  if (loaded && props.dataCity === forecast.city.name) {
     return (
     <div className="Forecast row"> 
-    <ForecastInfo index={0} forecast={forecast}/>
-    <ForecastInfo index={1} forecast={forecast}/>
-    <ForecastInfo index={2} forecast={forecast}/>
-    <ForecastInfo index={3} forecast={forecast}/>
-    <ForecastInfo index={4} forecast={forecast}/>
+    <ForecastInfo index={0} forecast={forecast} unit={props.unit}/>
+    <ForecastInfo index={1} forecast={forecast} unit={props.unit}/>
+    <ForecastInfo index={2} forecast={forecast} unit={props.unit}/>
+    <ForecastInfo index={3} forecast={forecast} unit={props.unit}/>
+    <ForecastInfo index={4} forecast={forecast} unit={props.unit}/>
     </div>
   );
 } else {
