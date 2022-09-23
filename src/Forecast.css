@@ -13,12 +13,34 @@
   margin: 10px auto;
 }
 
-.col {
+.Forecast .col {
   padding: 4px 0;
   border-radius: 5px;
 }
 
-.col:hover {
+.Forecast .col:hover {
   background-color: white;
   transition: all 150ms linear;
+}
+
+@media (max-width: 450px) {
+.Forecast.row {
+display: inline-block;
+width: 100%;
+}
+
+.Forecast .col {
+background-color: white;
+width: 47%;
+display: inline-block;
+margin-bottom: 5%;
+}
+
+.Forecast .col:nth-of-type(2n) {
+  margin-left: 3%;
+}
+
+.Forecast .col:nth-of-type(2n + 1) {
+  margin-right: 3%;
+}
 }

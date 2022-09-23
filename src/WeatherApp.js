@@ -78,7 +78,7 @@ function searchLocation(position) {
       <form id="search-form" onSubmit={handleSubmit}>
          <input type="text"  placeholder="type a city" autoFocus="on" id="input-city-form" 
           onChange={updateCity}/>
-       <input type="submit" id="search-submit" value="🔍 Search"/>
+       <input type="submit" id="search-submit" value="🔍"/>
        </form>
      </div> 
   );
@@ -88,7 +88,7 @@ function searchLocation(position) {
                 <div className="card card-weather">
                    <div className="card-body card-body-weather">
                       {form}
-                      <button id="current-button" onClick={handleCurrent}>Current</button>
+                      <button id="current-button" onClick={handleCurrent}>🚩</button>
 
                      <div className="Info">
                         <div className="card card-main-weather">

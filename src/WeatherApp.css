@@ -24,7 +24,7 @@
 
 .WeatherApp #input-city-form {
   margin-bottom: 10px;
-  margin-right: 10px;
+  margin-right: 2%;
 }
 
 .WeatherApp #search-submit {
@@ -56,4 +56,21 @@
   box-shadow: 5px 5px 10px rgb(92, 139, 209);
   color: rgb(92, 139, 209);
   background-color: #fef9d7;
+}
+
+
+@media (max-width: 768px) {
+
+  .WeatherApp #search-form input[type="text"] {
+    width: 70%; /*2%*/
+  }
+
+  .WeatherApp #search-form input[type="submit"] {
+    padding: auto 10%;
+    margin-right: 2%;
+  }
+
+  .WeatherApp #current-button {
+    padding: auto 10%;
+  }
 }
