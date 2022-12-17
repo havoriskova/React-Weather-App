@@ -9,7 +9,7 @@ let date=new Date(props.forecast.list[props.index].dt * 1000);
     return `${hour}:00`
     }
 
-function formatTemperature() {
+function formatTemperature() { 
 let temperatureInCelsius = Math.round(props.forecast.list[props.index].main.temp);
 
 if (props.unit === "celsius") {
