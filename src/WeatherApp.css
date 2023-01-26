@@ -27,14 +27,23 @@
   margin-right: 2%;
 }
 
+.WeatherApp .input-submit-container {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.WeatherApp .input-submit-grid-container {
+  display: grid;
+  place-content: center;
+}
+
 .WeatherApp #search-submit {
   border: 2px solid #8baad4;
   border-radius: 4px;
   background-color: #8baad4;
   color: #fef9d7;
-  display: inline;
   padding: 1px 5px;
-  margin-right: 10px;
+  width: 37px;
 }
 
 .WeatherApp #search-submit:hover {
@@ -49,7 +58,8 @@
   background-color: #8baad4;
   color: #fef9d7;
   display: inline;
-  padding: 1px 5px;
+  width: 37px;
+  height: 36px;
 }
 
 .WeatherApp #current-button:hover {
@@ -57,6 +67,33 @@
   color: rgb(92, 139, 209);
   background-color: #fef9d7;
 }
+
+.WeatherApp #glass,
+.WeatherApp #place {
+  stroke: white;
+  fill: white;
+}
+
+.WeatherApp #current-button:hover #place, 
+.WeatherApp .input-submit-container:hover #glass {
+  stroke: rgb(113, 153, 214);
+  fill: rgb(113, 153, 214);
+}
+
+
+.WeatherApp .no-display-svg {
+  display: none;
+}
+
+.WeatherApp .display-svg {
+  display: inline;
+}
+
+.WeatherApp .display-glass {
+  position: absolute;
+  pointer-events: none;
+}
+
 
 
 @media (max-width: 768px) {
@@ -70,7 +107,5 @@
     margin-right: 2%;
   }
 
-  .WeatherApp #current-button {
-    padding: auto 10%;
-  }
+
 }

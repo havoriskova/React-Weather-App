@@ -76,9 +76,21 @@ function searchLocation(position) {
 
   let form = (<div className="WeatherApp form">
       <form id="search-form" onSubmit={handleSubmit}>
-         <input type="text"  placeholder="type a city" autoFocus="on" id="input-city-form" 
+        <input type="text"  placeholder="type a city" autoFocus="on" id="input-city-form" 
           onChange={updateCity}/>
-       <input type="submit" id="search-submit" value="🔍"/>
+        <div className="input-submit-container">
+          <div className="input-submit-grid-container">
+            <input type="submit" id="search-submit" value="  "/>
+              <svg className="no-display-svg">
+                <symbol id='glass'>
+                  <path d="M10,18c1.9,0,3.6-0.6,4.9-1.7l4.4,4.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4l-4.4-4.4   c1-1.4,1.7-3,1.7-4.9c0-4.4-3.6-8-8-8s-8,3.6-8,8S5.6,18,10,18z M10,4c3.3,0,6,2.7,6,6s-2.7,6-6,6s-6-2.7-6-6S6.7,4,10,4z"/>
+                </symbol>
+              </svg>
+              <svg className='display-svg display-glass'  viewBox='-3 -3 24 24' width='30' height='30'>
+                <use href="#glass"/>
+              </svg>
+          </div>
+        </div>
        </form>
      </div> 
   );
@@ -88,7 +100,16 @@ function searchLocation(position) {
                 <div className="card card-weather">
                    <div className="card-body card-body-weather">
                       {form}
-                      <button id="current-button" onClick={handleCurrent}>🚩</button>
+                      <button id="current-button" onClick={handleCurrent}>
+                        <svg className="no-display-svg">
+                          <symbol id='place'>
+                            <path d="M16,2A10,10,0,0,0,6,12c0,5.15,8.26,16.34,9.2,17.6a1,1,0,0,0,1.6,0C17.74,28.34,26,17.15,26,12A10,10,0,0,0,16,2Zm0,25.3C13.2,23.39,8,15.43,8,12a8,8,0,0,1,16,0C24,15.43,18.8,23.39,16,27.3Z"/><path d="M16,7a5,5,0,1,0,5,5A5,5,0,0,0,16,7Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,16,15Z"/>
+                          </symbol>
+                        </svg>
+                        <svg className='display-svg' viewBox='4 3 32 32' width='29' height='34'>
+                          <use href="#place"/>
+                        </svg>
+                      </button>
 
                      <div className="Info">
                         <div className="card card-main-weather">
